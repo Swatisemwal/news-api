@@ -11,7 +11,8 @@ export default class NewsItems extends Component {
     <h5 className="card-title" style={{height:'110px'}}>{this.props.title.slice(0,60)+"..."}</h5>
     <hr/>
     <h6 style={{fontSize:"13px"}}>Source :{this.props.source}</h6> 
-     <h6 style={{fontSize:"13px"}}>Date :{`${new Date(this.props.date).getDate()}/${new Date(this.props.date).getMonth()}/${new Date(this.props.date).getFullYear()}`}</h6>
+    {console.log(this.props.date)}
+     <h6 style={{fontSize:"13px"}}>Date :{`${new Date(this.props.date).getDate()}/${new Date(this.props.date).getMonth()+1}/${new Date(this.props.date).getFullYear()}`}</h6>
      <hr/>
     <p className="card-text" style={{height:'100px'}}>{this.props.description.slice(0,80)+"..."}</p>
     <a href={this.props.url} className="btn section btn-sm">Full Article</a>
